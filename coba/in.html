@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cashier Program</title>
+    <style>
+      /* Your CSS code here */
+    </style>
+  </head>
+  <body>
+    <input type="Kode" id="kode" />
+    <input type="barang" id="barang" />
+    <input type="Harga" id="Harga" /><br />
+    <input type="Kode" id="kode" />
+    <input type="Kode" id="kode" />
+    <input type="Kode" id="kode" /><br />
+    <input type="Kode" id="kode" />
+    <input type="Kode" id="kode" />
+    <input type="Kode" id="kode" /><br />
+    <input type="Kode" id="kode" />
+    <input type="Kode" id="kode" />
+    <input type="Kode" id="kode" />
+
+    <h2>Inputan User</h2>
+    <label for="kode">Masukkan Kode :</label>
+    <input type="text" id="kode" />
+    <br />
+    <label for="barang">Banyaknya Barang :</label>
+    <input type="number" id="barang" /><br />
+    <button onclick="submit()">submit</button>
+    <ul id="itemList"></ul>
+    <p>Total: <span id="total">0</span></p>
+
+    <script>
+      let total = 0;
+      function addItem() {
+        const kode = document.getElementById("kode").value;
+        const barang = parseFloat(document.getElementById("barang").value);
+        total += barang;
+        document.getElementById(
+          "itemList"
+        ).innerHTML += `<li>${kode} - $${barang}</li>`;
+        document.getElementById("total").textContent = total;
+      }
+    </script>
+  </body>
+</html>
